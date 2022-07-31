@@ -1,0 +1,64 @@
+.teams {
+    width: 100vw;
+    height: 100vh;
+    padding: 50px 0;
+    .container-fluid {
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 3px;
+            position: relative;
+            overflow: hidden;
+            @media screen and (max-width: 450px) {
+              font-size: 1.8rem;
+            }
+            &::before {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              height: 4px;
+              width: 100px;
+              background-color: var(--main-color);
+              transform: translateX(110px);
+              opacity: 0;
+              transition: all 0.5s cubic-bezier(0.55,0,0.1,1);
+            }
+            &:hover::before {
+              transform: translateX(0);
+              opacity: 1;
+              width: 50px;
+            }
+        }
+    }
+    .non-tech {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right,#ffb101,#EE8001);
+      background-size: 400% 400%;
+      animation: animate 10s infinite ease-in-out;
+      @keyframes animate {
+        0% {
+          background-position: 0 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+      .heading {
+        h1 {
+          font-size: 4rem;
+          font-weight: 300;
+          letter-spacing: 4px;
+          text-align: center;
+          @media screen and (max-width: 450px) {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+}

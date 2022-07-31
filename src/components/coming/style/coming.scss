@@ -1,0 +1,102 @@
+.coming {
+    width: 100vw;
+    height: 120vh;
+    padding: 50px 0;
+    .container-fluid {
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 3px;
+            position: relative;
+            overflow: hidden;
+            @media screen and (max-width: 450px) {
+              font-size: 1.9rem;
+            }
+            &::before {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              height: 4px;
+              width: 100px;
+              background-color: var(--main-color);
+              transform: translateX(110px);
+              opacity: 0;
+              transition: all 0.5s cubic-bezier(0.55,0,0.1,1);
+            }
+            &:hover::before {
+              transform: translateX(0);
+              opacity: 1;
+              width: 50px;
+            }
+        }
+    }
+    .coming-box {
+        .swiper {
+            width: 100vw;
+            height: 100vh;
+          }
+          .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--light);
+            position: relative;
+            .slide-box {
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              max-width: 600px;
+              background: rgba(238,128,1,0.3);
+              backdrop-filter: blur(3px);
+              padding: 1rem;
+              border-radius: 5px;
+            }
+          }
+          .swiper-slide:nth-child(1),
+          .swiper-slide:nth-child(2),
+          .swiper-slide:nth-child(3),
+          .swiper-slide:nth-child(4),
+          .swiper-slide:nth-child(5),
+          .swiper-slide:nth-child(6),
+          .swiper-slide:nth-child(7),
+          .swiper-slide:nth-child(8),
+          .swiper-slide:nth-child(9) {
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+          .swiper-slide:nth-child(1) {
+            background-image: url('https://picsum.photos/1200/1300');
+          }
+          .swiper-slide:nth-child(2) {
+            background-image: url('https://picsum.photos/1200/1300');
+          }
+          .swiper-slide:nth-child(3) {
+            background-image: url('https://picsum.photos/1200/1300');
+          }
+          .swiper-slide:nth-child(4) {
+            background-image: url('https://picsum.photos/1200/1300');
+          }
+          .swiper-slide:nth-child(5) {
+            background-image: url('https://picsum.photos/1200/1300');
+          }
+          .swiper-slide:nth-child(6) {
+            background-image: url('https://picsum.photos/1200/1300');
+          }
+          .swiper-slide:nth-child(7) {
+            background-image: url('https://picsum.photos/1200/1300');
+          }
+          .swiper-slide:nth-child(8) {
+            background-image: url('https://picsum.photos/1200/1300');
+          }
+          .swiper-slide:nth-child(9) {
+            background-image: url('https://picsum.photos/1200/1300');
+          }
+    }
+    .more {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+}

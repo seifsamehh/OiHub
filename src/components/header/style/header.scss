@@ -1,0 +1,71 @@
+.header {
+    width: 100vw;
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: rgba(255,177,1, 0.4) 0px 5px, rgba(255,177,1, 0.3) 0px 10px, rgba(255,177,1, 0.2) 0px 15px, rgba(255,177,1, 0.1) 0px 20px, rgba(255,177,1, 0.05) 0px 25px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    .container {
+        .row {
+            justify-content: center;
+            align-items: center;
+            .col-1,
+            .col-11 {
+                display: flex;
+                justify-content: center;
+            }
+            .column-one {
+                img {
+                    width: calc(100vw - 75vw);
+                    height: calc(100vh - 80vh);
+                    @media screen and (max-width: 450px) {
+                        transform: translateX(50%);
+                        width: 60vw;
+                    }
+                }
+            }
+            .column-two {
+                nav {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @media screen and (max-width: 1024px) {
+                        display: none;
+                    }
+                    @media (min-width: 1025px) and (max-width: 1195px) {
+                        transform: translateX(4%);
+                    }
+                    a {
+                        color: var(--light);
+                        margin-right: 1.2rem;
+                        font-size: 1.1rem;
+                        font-weight: 500;
+                        letter-spacing: 2px;
+                        position: relative;
+                        overflow: hidden;
+                        text-align: center;
+                        @media (min-width: 768px) and (max-width: 1195px) {
+                            margin: 0 0.4rem;
+                        }
+                        &::before {
+                          content: '';
+                          position: absolute;
+                          bottom: 0;
+                          height: 4px;
+                          width: 100px;
+                          background-color: var(--main-color);
+                          transform: translateX(110px);
+                          opacity: 0;
+                          transition: all 0.5s cubic-bezier(0.55,0,0.1,1);
+                        }
+                        &:hover::before {
+                          transform: translateX(0);
+                          opacity: 1;
+                          width: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

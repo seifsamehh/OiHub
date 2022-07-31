@@ -1,0 +1,40 @@
+.main-media {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    border-top: 5px dashed var(--main-color);
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+    .left {
+      .hr-box {
+        h1 {
+          cursor: grabbing;
+          font-size:6rem;
+          letter-spacing: 5px;
+          -webkit-text-fill-color: transparent;
+          -webkit-text-stroke-width: 3px;
+          -webkit-text-stroke-color: var(--light);
+          text-shadow: 
+                    8px 8px var(--main-color);
+        }
+      }
+    }
+    .right {
+      .information {
+        border: 2px dashed var(--light);
+        max-width: 600px;
+        background: rgba(238,128,1,0.5);
+        backdrop-filter: blur(3px);
+        padding: 1rem;
+        border-radius: 5px;
+        transition: 0.5s !important;
+        &:hover {
+          box-shadow: 11px 14px 1px var(--main-color);
+        }
+      }
+    }
+}

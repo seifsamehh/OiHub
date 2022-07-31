@@ -1,0 +1,12 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 0.7rem;
+}
+.footer span a {
+  color: var(--main-color);
+  letter-spacing: 4px;
+  font-weight: 900;
+}/*# sourceMappingURL=footer.css.map */
